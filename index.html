@@ -81,17 +81,21 @@ nav {
 .hero {
   min-height: 100vh;
   padding-top: 56px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-bottom: 1px solid #2a2a2a;
 }
 
 .hero-left {
-  border-right: 1px solid #2a2a2a;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  text-align: center;
   padding: 80px 64px;
+  width: 100%;
+  max-width: 900px;
 }
 
 .hero-eyebrow {
@@ -172,16 +176,12 @@ nav {
 .hero-right {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  width: 100%;
+  border-top: 1px solid #2a2a2a;
 }
 
 .hero-logo-wrap {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 48px;
-  border-bottom: 1px solid #2a2a2a;
+  display: none;
 }
 
 .hero-logo {
@@ -193,6 +193,7 @@ nav {
 .hero-stats {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  width: 100%;
 }
 
 .hstat {
@@ -703,7 +704,7 @@ footer {
   border: 1px solid #2a2a2a;
   margin-bottom: 24px;
   width: 100%;
-  max-width: 520px;
+  max-width: 560px;
 }
 
 .gateway-panel {
@@ -776,6 +777,81 @@ footer {
 .hero-btns-secondary {
   display: flex;
   gap: 0;
+  justify-content: center;
+}
+
+
+/* ── GLOBAL CENTER ── */
+.wrap { text-align: center; }
+.sec-title { text-align: center; }
+.sec-desc { text-align: center; margin-left: auto; margin-right: auto; }
+.sec-label { justify-content: center; }
+.sec-label::after { display: none; }
+
+/* Center platform cards content */
+.pcards { margin: 0 auto; }
+.pc { text-align: center; }
+.pc-text { text-align: center; }
+
+/* Center plugin table — keep desc left for readability */
+.ptable { margin: 0 auto; }
+.prow { text-align: left; }
+
+/* Center gov/commercial split */
+.split-grid { margin: 0 auto; }
+.split-title { text-align: center; }
+.split-price { text-align: center; }
+.split-price-sub { text-align: center; }
+.split-desc { text-align: center; }
+.split-badge { display: block; text-align: center; }
+.split-verify { text-align: center; }
+.gov-sec .wrap { text-align: center; }
+
+/* Center about */
+.about-sec .wrap { text-align: center; }
+.about-grid { text-align: left; }
+.about-q { text-align: center; }
+.about-attr { text-align: center; }
+.about-rule { margin: 0 auto 16px; }
+
+/* Center footer */
+footer { justify-content: center; flex-direction: column; align-items: center; gap: 16px; }
+.flinks { justify-content: center; }
+.fcopy { text-align: center; }
+
+/* Center stats bar */
+.hero-stats { text-align: center; }
+.hstat { text-align: center; }
+
+/* Center gateway */
+.hero-gateway { margin: 0 auto 24px; }
+.gateway-panel { align-items: center; text-align: center; }
+
+/* Center section headers */
+.gov-sec > .wrap > .sec-label,
+.com-sec > .wrap > .sec-label { justify-content: center; }
+
+/* Center logo section */
+.logo-section { text-align: center; }
+
+
+/* ── PLUGIN TABLE CENTER ── */
+.prow {
+  text-align: center;
+  justify-items: center;
+}
+.prow.hdr { text-align: center; }
+.prow.hdr span { text-align: center; }
+.pr-name { text-align: center; }
+.pr-desc { text-align: center; }
+.pr-tag { text-align: center; margin: 0 auto; }
+
+
+/* ── PLUGIN NAME SIZE ── */
+.pr-name {
+  font-size: 19px !important;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 </style>
