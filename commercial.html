@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commercial — Wolfmark Systems</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  background: #000;
+  color: #aaa;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  text-align: center;
+}
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  height: 56px;
+  background: #000;
+  border-bottom: 1px solid #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+}
+.nav-wordmark {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #e0e0e0;
+  text-decoration: none;
+}
+.nav-links {
+  display: flex;
+  gap: 0;
+  list-style: none;
+}
+.nav-links a {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #555;
+  text-decoration: none;
+  padding: 0 16px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #1c1c1c;
+  transition: color 0.2s;
+}
+.nav-links a:last-child { border-right: 1px solid #1c1c1c; }
+.nav-links a:hover { color: #ddd; }
+.nav-gh {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: #aaa;
+  text-decoration: none;
+  border: 1px solid #333;
+  padding: 7px 18px;
+  transition: all 0.2s;
+}
+.nav-gh:hover { border-color: #aaa; color: #fff; }
+.page-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 120px 48px 80px;
+}
+.page-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 24px;
+}
+.page-title {
+  font-size: clamp(48px, 8vw, 96px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  line-height: 0.95;
+  margin-bottom: 24px;
+}
+.page-sub {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(18px, 2.5vw, 24px);
+  color: #666;
+  line-height: 1.7;
+  max-width: 680px;
+  margin: 0 auto 64px;
+}
+.divider {
+  border-top: 1px solid #1c1c1c;
+  margin: 64px 0;
+}
+.price-block {
+  margin: 48px 0;
+}
+.price {
+  font-size: clamp(64px, 10vw, 120px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  line-height: 0.9;
+}
+.price-sub {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #333;
+  margin-top: 12px;
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1px;
+  background: #1c1c1c;
+  border: 1px solid #1c1c1c;
+  margin: 48px 0;
+  text-align: left;
+}
+.feature-card {
+  background: #000;
+  padding: 32px 28px;
+  transition: background 0.2s;
+}
+.feature-card:hover { background: #080808; }
+.feature-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin-bottom: 10px;
+}
+.feature-card-text {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.7;
+}
+.badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #555;
+  border: 1px solid #2a2a2a;
+  display: inline-block;
+  padding: 6px 16px;
+  margin-bottom: 32px;
+}
+.cta-block {
+  margin: 56px 0;
+  display: flex;
+  gap: 0;
+  justify-content: center;
+}
+.btn-primary {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #000;
+  background: #e0e0e0;
+  border: 1px solid #e0e0e0;
+  padding: 14px 40px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.btn-primary:hover { background: transparent; color: #e0e0e0; }
+.btn-secondary {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #666;
+  background: transparent;
+  border: 1px solid #2a2a2a;
+  border-left: none;
+  padding: 14px 40px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.btn-secondary:hover { border-color: #777; color: #ddd; }
+.verify-bar {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #333;
+  border: 1px solid #1c1c1c;
+  padding: 16px 32px;
+  display: inline-block;
+  margin: 32px 0;
+}
+footer {
+  border-top: 1px solid #1c1c1c;
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.flinks {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flinks a {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.flinks a:hover { color: #aaa; }
+.fcopy {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .page-wrap { padding: 90px 24px 60px; }
+  footer { padding: 32px 20px; }
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-wordmark">Wolfmark Systems</a>
+  <ul class="nav-links">
+    <li><a href="/#platform">Platform</a></li>
+    <li><a href="/#plugins">Plugins</a></li>
+    <li><a href="/gov.html">Gov / Mil</a></li>
+    <li><a href="/commercial.html">Commercial</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+  </ul>
+  <a href="https://github.com/WolfmarkSystems/Strata" class="nav-gh" target="_blank">GitHub →</a>
+</nav>
+
+
+<div class="page-wrap">
+  <div class="page-label">Licensing</div>
+  <h1 class="page-title">Commercial<br>Use</h1>
+  <p class="page-sub">For private forensic firms, corporate security teams, independent examiners, legal firms, and insurance investigators. Pricing is based on your use case — not a subscription designed to maximize revenue.</p>
+
+  <div class="badge">Commercial License</div>
+
+  <div class="price-block">
+    <div class="price">Contact</div>
+    <div class="price-sub">Sized to your organization</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="feature-grid">
+    <div class="feature-card"><div class="feature-card-title">All 19 Forensic Plugins</div><div class="feature-card-text">Every plugin included. Windows, macOS, iOS, Android, cloud, network, malware, memory, and threat correlation.</div></div>
+    <div class="feature-card"><div class="feature-card-title">MITRE ATT&amp;CK + 27 Sigma Rules</div><div class="feature-card-text">Full kill chain coverage. Confidence scoring. Threat assessment output on every case.</div></div>
+    <div class="feature-card"><div class="feature-card-title">Court-Ready Reporting</div><div class="feature-card-text">Word and PDF export. Chain of custody. Evidence integrity. Custom logo and signature blocks for your firm.</div></div>
+    <div class="feature-card"><div class="feature-card-title">All Platform Support</div><div class="feature-card-text">Windows, macOS, Linux, iOS, Android. Air-gap deployable. 15MB single binary. USB portable. No installation required.</div></div>
+    <div class="feature-card"><div class="feature-card-title">Priority Support</div><div class="feature-card-text">Direct line to Wolfmark Systems. Issues get addressed. Feature requests considered. Not a ticket queue that goes nowhere.</div></div>
+    <div class="feature-card"><div class="feature-card-title">No Subscription Traps</div><div class="feature-card-text">No per-case licensing. No cloud dependency. No usage telemetry. Annual license renewal required. No surprises.</div></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.15em;color:#444;text-transform:uppercase;margin-bottom:24px;">Who this is for</div>
+  <div style="font-size:15px;color:#666;line-height:2.2;max-width:700px;margin:0 auto;">
+    Private forensic firms &nbsp;·&nbsp; Independent examiners &nbsp;·&nbsp; Corporate security teams &nbsp;·&nbsp; Insider threat investigators &nbsp;·&nbsp; Legal firms &amp; eDiscovery &nbsp;·&nbsp; Insurance fraud investigators &nbsp;·&nbsp; Incident response consultancies
+  </div>
+
+  <div class="cta-block">
+    <a href="/contact.html" class="btn-primary">Get in Touch</a>
+    <a href="https://github.com/WolfmarkSystems/Strata" class="btn-secondary" target="_blank">View on GitHub</a>
+  </div>
+</div>
+
+<footer>
+  <ul class="flinks">
+    <li><a href="/">Home</a></li>
+    <li><a href="/#platform">Platform</a></li>
+    <li><a href="/#plugins">Plugins</a></li>
+    <li><a href="/gov.html">Gov / Mil</a></li>
+    <li><a href="/commercial.html">Commercial</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+    <li><a href="https://github.com/WolfmarkSystems/Strata" target="_blank">GitHub</a></li>
+  </ul>
+  <div class="fcopy">© 2026 Wolfmark Systems · All rights reserved</div>
+</footer>
+
+</body>
+</html>
