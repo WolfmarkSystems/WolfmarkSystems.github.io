@@ -921,11 +921,11 @@ footer { justify-content: center; flex-direction: column; align-items: center; g
   <div class="hero-right">
         <div class="hero-stats">
       <div class="hstat"><div class="hstat-n">17</div><div class="hstat-l">Forensic Plugins</div></div>
-      <div class="hstat"><div class="hstat-n">29</div><div class="hstat-l">Sigma Rules</div></div>
+      <div class="hstat"><div class="hstat-n">34</div><div class="hstat-l">Sigma Rules</div></div>
       <div class="hstat"><div class="hstat-n">24MB</div><div class="hstat-l">macOS ARM64</div></div>
       <div class="hstat"><div class="hstat-n">26.5MB</div><div class="hstat-l">Windows x64</div></div>
       <div class="hstat"><div class="hstat-n">39.1MB</div><div class="hstat-l">Linux x64</div></div>
-      <div class="hstat"><div class="hstat-n">1,895</div><div class="hstat-l">Tests Passing</div></div>
+      <div class="hstat"><div class="hstat-n">2,393</div><div class="hstat-l">Tests Passing</div></div>
       <div class="hstat"><div class="hstat-n">89%</div><div class="hstat-l">Pure Rust</div></div>
     </div>
   </div>
@@ -940,11 +940,12 @@ footer { justify-content: center; flex-direction: column; align-items: center; g
     <div class="pcards">
       <div class="pc"><div class="pc-idx">01 / Windows</div><div class="pc-title">Windows Forensics</div><div class="pc-text">NTFS MFT walker. Registry hive parsing. Full EVTX real parser — 60+ event IDs across 7 channels. Prefetch, BAM/DAM, Scheduled Tasks, BITS jobs.</div></div>
       <div class="pc"><div class="pc-idx">02 / macOS</div><div class="pc-title">macOS &amp; APFS</div><div class="pc-text">Full APFS B-tree walker. LaunchAgents, FSEvents, Time Machine, Unified Log, Gatekeeper, quarantine artifacts. Apple-native app parsing.</div></div>
-      <div class="pc"><div class="pc-idx">03 / Mobile</div><div class="pc-title">iOS &amp; Android</div><div class="pc-text">KnowledgeC.db, PowerLog, iTunes backup structure, SMS/iMessage. Android factory reset detection. WhatsApp, Signal, Telegram across both platforms.</div></div>
+      <div class="pc"><div class="pc-idx">03 / Mobile</div><div class="pc-title">iOS &amp; Android</div><div class="pc-text">355 mobile artifact parsers. SMS, calls, contacts, Gmail, Chrome, photos, location, health, fitness, financial apps, social media. Cellebrite UFDR ingestion. All read-only SQLite — evidence never modified.</div></div>
       <div class="pc"><div class="pc-idx">04 / Evidence</div><div class="pc-title">Image Formats</div><div class="pc-text">E01/EWF, Ex01, L01, RAW/DD, VMDK, VHD/VHDX, AFF4, ISO, DMG. Hex editor. SHA-256 + MD5 hashing. 62-signature file carving.</div></div>
       <div class="pc"><div class="pc-idx">05 / Reporting</div><div class="pc-title">Court-Ready Output</div><div class="pc-text">Word and PDF report export. Chain of custody audit log. Evidence integrity verification. Hash set import — NSRL and known-bad. IP geolocation.</div></div>
-      <div class="pc"><div class="pc-idx">06 / Threat Intel</div><div class="pc-title">MITRE ATT&amp;CK</div><div class="pc-text">29 Sigma correlation rules. Full kill chain coverage. Confidence scoring. Kerberoasting, LSASS access, WMI persistence, lateral movement detection.</div></div>
-      <div class="pc"><div class="pc-idx">07 / Child Safety</div><div class="pc-title">CSAM Detection</div><div class="pc-text">Hash-based and perceptual detection. NCMEC MD5 and Project VIC VICS compatible. SHA256-chained audit trail. Images never auto-displayed. Free on all license tiers.</div></div>
+      <div class="pc"><div class="pc-idx">06 / Threat Intel</div><div class="pc-title">MITRE ATT&amp;CK</div><div class="pc-text">34 Sigma correlation rules. Full kill chain coverage. Confidence scoring. Kerberoasting, LSASS access, WMI persistence, lateral movement detection.</div></div>
+      <div class="pc"><div class="pc-idx">07 / ML Analysis</div><div class="pc-title">AI-Powered Scoring</div><div class="pc-text">Anomaly detection flags statistical outliers. Executive case summaries in plain English. Anti-forensic obstruction scoring (0-100) catches VSS deletion, log clearing, and evidence destruction. All deterministic — no cloud, no model files.</div></div>
+      <div class="pc"><div class="pc-idx">08 / Child Safety</div><div class="pc-title">CSAM Detection</div><div class="pc-text">Hash-based and perceptual detection. NCMEC MD5 and Project VIC VICS compatible. SHA256-chained audit trail. Images never auto-displayed. Free on all license tiers.</div></div>
     </div>
   </div>
 </div>
@@ -954,7 +955,7 @@ footer { justify-content: center; flex-direction: column; align-items: center; g
   <div class="wrap">
     <div class="sec-label">Plugins</div>
     <h2 class="sec-title">17 plugins.<br>One examiner.</h2>
-    <p class="sec-desc">Every plugin runs independently. Sigma always runs last — correlating across all findings before producing a threat assessment. 29 correlation rules covering the full MITRE ATT&CK kill chain.</p>
+    <p class="sec-desc">Every plugin runs independently. Sigma always runs last — correlating across all findings before producing a threat assessment. 34 correlation rules covering the full MITRE ATT&CK kill chain.</p>
     <div class="ptable">
       <div class="prow hdr"><span>Plugin</span><span>Coverage</span><span>Platform</span></div>
       <div class="prow"><div class="pr-name">Phantom</div><div class="pr-desc">Registry hives, USBSTOR chain, ShimCache, WDigest detection, NTDS.dit, WMI persistence, CapabilityAccessManager</div><div class="pr-tag">Windows</div></div>
@@ -972,9 +973,9 @@ footer { justify-content: center; flex-direction: column; align-items: center; g
       <div class="prow"><div class="pr-name">Wraith</div><div class="pr-desc">hiberfil.sys profiling, LSASS dump detection, crash dump analysis, pagefile string extraction</div><div class="pr-tag">Memory</div></div>
       <div class="prow"><div class="pr-name">Recon</div><div class="pr-desc">Username extraction, email regex, public IP detection, AWS AKIA key detection, SID history, domain artifacts</div><div class="pr-tag">All</div></div>
       <div class="prow"><div class="pr-name">Pulse</div><div class="pr-desc">WhatsApp, Signal, Telegram, Snapchat, Instagram, Discord, TikTok, Facebook Messenger — iOS, Android, Windows, macOS</div><div class="pr-tag">All</div></div>
-      <div class="prow"><div class="pr-name">Pulse</div><div class="pr-desc">216 mobile artifact parsers — iOS and Android. WhatsApp, Signal, Telegram, Instagram, TikTok, Snapchat, Chrome, Safari, health, fitness, financial, crypto, and more. Cellebrite UFDR ingestion.</div><div class="pr-tag">All</div></div>
+      <div class="prow"><div class="pr-name">Pulse</div><div class="pr-desc">355 mobile artifact parsers — iOS and Android. WhatsApp, Signal, Telegram, Instagram, TikTok, Snapchat, Chrome, Safari, health, fitness, financial, crypto, and more. Cellebrite UFDR ingestion.</div><div class="pr-tag">All</div></div>
       <div class="prow"><div class="pr-name">CSAM Sentinel</div><div class="pr-desc">Hash-based and perceptual CSAM detection. NCMEC/Project VIC compatible. SHA256-chained immutable audit log. Court-ready PDF reports. Free on all tiers — no gating ever.</div><div class="pr-tag">Free / All</div></div>
-      <div class="prow"><div class="pr-name">Sigma</div><div class="pr-desc">29 correlation rules including Rules 28-29 for CSAM hash and perceptual variant detection. Always runs last. Full MITRE ATT&amp;CK kill chain. Confidence scoring.</div><div class="pr-tag">Last</div></div>
+      <div class="prow"><div class="pr-name">Sigma</div><div class="pr-desc">34 correlation rules including Rules 28-29 for CSAM hash and perceptual variant detection. Always runs last. Full MITRE ATT&amp;CK kill chain. Confidence scoring.</div><div class="pr-tag">Last</div></div>
     </div>
   </div>
 </div>
